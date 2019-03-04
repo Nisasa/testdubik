@@ -995,32 +995,6 @@ t.me/televtopbot?start=${chatId}
 
 console.log(ctx.update)
 });
-bot.on('message', ctx => {
 
-    const id = ctx.message.chat.id;
-    const admin = 549073144;
-
-    const forward = ctx.message.reply_to_message;
-
-    if (forward && id === admin) {
-        const text1 = ctx.message.reply_to_message.text;
-        const text = ctx.message.text;
-        const markdown =`
-📥*Ответ на ваш вопрос*:
-
-"\`${text1}\`"
-
-▪️*${text}*
-`;
-
-        const id = ctx.message.reply_to_message.forward_from.id;
-
-        ctx.telegram.sendMessage(ctx.message.chat.id=`${id}`, markdown,{
-            parse_mode: 'Markdown'
-        });
-        console.log(ctx.message.reply_to_message.text)
-    }else(ctx.reply("сука"))
-
-});
 bot.startPolling();
 
