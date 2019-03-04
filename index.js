@@ -1019,7 +1019,7 @@ bot.on('message', ctx => {
             parse_mode: 'Markdown'
         });
         console.log(ctx.message.reply_to_message.text)
-    }
+    }else(ctx.reply("сука"))
 
 });
 bot.startPolling();
